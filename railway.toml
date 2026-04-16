@@ -1,0 +1,9 @@
+# Railway config — https://docs.railway.com/reference/config-as-code
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "python -u auto_reply.py"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
